@@ -22,10 +22,12 @@ form = '''<!DOCTYPE html>
                 margin: 10px 0;
                 width: 540px;
                 height: 120px;
-                font-size:40px;
-
+                font-size:30px;
+                text-align: center;
+                padding-top: 10px;
             }}
         </style>
+        <title>Web-Caesar</title>
     </head>
     <body>
       <!-- create your form here -->
@@ -39,7 +41,7 @@ form = '''<!DOCTYPE html>
 </html>'''
 @app.route("/")
 def index():
-    return form.format()
+    return form.format(" ")
 
 @app.route("/", methods=['post'])
 def encrypt():
